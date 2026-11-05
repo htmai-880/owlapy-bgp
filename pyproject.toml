@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "owlapy-bgp"
+version = "0.1.1"
+description = "Additional package for OWLAPY to execute BGP queries on SyncOntology."
+dependencies = [
+    "owlapy>=1.6.7",
+    "JPype1>=1.5.0",
+    "pandas",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "BLE"]
+
+[tool.setuptools.package-data]
+owlapy_bgp = ["extra_jar_dependencies/*.jar"]
